@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: saudeebemestar-service
+  jpa:
+    database: postgresql
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: jdbc:postgresql://localhost:5432/saude_bem_estar
+    username: admin
+    password: admin
+    initialization-mode: always

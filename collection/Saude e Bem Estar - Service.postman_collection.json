@@ -1,0 +1,481 @@
+{
+	"info": {
+		"_postman_id": "44bb7ea0-4d5b-4d5f-be6e-2071e7291488",
+		"name": "Saude e Bem Estar - Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "684105"
+	},
+	"item": [
+		{
+			"name": "medicamento",
+			"item": [
+				{
+					"name": "Consulta medicamento por ID",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/medicamentos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medicamentos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista todos medicamentos",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/medicamentos?page=0&size=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medicamentos"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualiza medicamento",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Dorflex\",\n  \"dosagem\": \"100ml\",\n  \"fabricante\": \"EMS\",\n  \"qtdEstoque\": 30,\n  \"dataValidade\": \"2025-04-10\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/medicamentos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medicamentos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove medicamento através do ID",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Dorflex\",\n  \"dosagem\": \"100ml\",\n  \"fabricante\": \"EMS\",\n  \"qtdEstoque\": 30,\n  \"dataValidade\": \"2025-04-10\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/medicamentos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medicamentos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adiciona medicamento",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Xarope Melagrião\",\n  \"dosagem\": \"200mg\",\n  \"fabricante\": \"EMS\",\n  \"qtdEstoque\": 30,\n  \"dataValidade\": \"2026-04-10\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/medicamentos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medicamentos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "atendimento",
+			"item": [
+				{
+					"name": "Lista todos atendimentos",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/atendimentos?page=0&size=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"atendimentos"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adicionar atendimento",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"paciente\": \"João Silva\",\n    \"data\": \"2024-06-20\",\n    \"medico\": \"Dr Alexandre Cardoso\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/atendimentos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"atendimentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar atendimento por ID",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/atendimentos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"atendimentos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove atendimento por ID",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/atendimentos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"atendimentos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualiza atendimento",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"paciente\": \"João Silva\",\n    \"data\": \"2024-06-25\",\n    \"medico\": \"Dr Alexandre Cardoso\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/atendimentos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"atendimentos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "recomendacao",
+			"item": [
+				{
+					"name": "Lista todas recomendações",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/recomendacoes?page=0&size=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"recomendacoes"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adicionar recomendação",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"paciente\": \"João Silva\",\n    \"diagnostico\": \"Enxaqueca\",\n    \"recomendacao\": \"Tomar Dipirona de 8 em 8 horas\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/recomendacoes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"recomendacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar recomendação",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"paciente\": \"João Silva\",\n    \"diagnostico\": \"Enxaqueca\",\n    \"recomendacao\": \"Tomar Dipirona de 12 em 12 horas\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/recomendacoes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"recomendacoes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar recomendação por ID",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/recomendacoes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"recomendacoes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar recomendação por ID",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/recomendacoes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"recomendacoes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ajuda",
+			"item": [
+				{
+					"name": "Obter ajuda",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ajuda",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ajuda"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
